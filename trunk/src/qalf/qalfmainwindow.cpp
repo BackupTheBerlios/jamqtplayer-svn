@@ -16,5 +16,11 @@
 
 QalfMainWindow::QalfMainWindow()
 {
+	this->fileList = new QListView(this);
+	this->setCentralWidget(this->fileList);
+}
 
+void QalfMainWindow::setFileModel(QDirModel* model) {
+	this->fileList->setModel(model);
+	this->fileList->setRootIndex(model->index(QDir::currentPath()));
 }

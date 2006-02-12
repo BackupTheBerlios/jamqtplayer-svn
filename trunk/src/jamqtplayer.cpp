@@ -17,8 +17,13 @@
 
 int main(int argc, char *argv[])
 {
+	// Initialization of main window
 	QApplication app(argc, argv);
 	QalfMainWindow mainWin;
+
+	// initialization of file browser
+	QDirModel *fileModel = new QDirModel;
+	mainWin.setFileModel(fileModel);
 	mainWin.show();
 	return app.exec();
 }

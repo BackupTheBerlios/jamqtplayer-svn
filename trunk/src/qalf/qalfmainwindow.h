@@ -16,6 +16,8 @@
 #define QalfMAINWINDOW_H
 
 #include <QMainWindow>
+#include <QDirModel>
+#include <QListView>
 
 class QalfMainWindow : public QMainWindow
 {
@@ -23,13 +25,14 @@ class QalfMainWindow : public QMainWindow
 
 	public:
 		QalfMainWindow();
+		void setFileModel(QDirModel *) ;
 
 	protected:
 
 	private slots:
 	
 	private:
-	
+		QListView *fileList;
 };
 
 #endif // QalfMAINWINDOW_H
