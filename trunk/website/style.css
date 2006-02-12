@@ -1,0 +1,46 @@
+#title {
+text-align:center;
+width: 80%;
+}
+#logo {
+float:right;
+}
+
+.clear {
+	clear:both;
+}
+
+#menu {
+	border : 1px solid #000000 ;
+	background-color:#1A79A7 ;
+	width:80%;
+	padding:0 ;
+	display: table;
+	table-layout: fixed;
+}
+
+li {
+	display: table-cell;
+	position:relative;
+	margin:3px ;
+	list-style-type:none;
+	list-style-position: inside;
+	font-weight:bold;
+}
+
+li:hover {
+	background-color: #2D96BC ;
+}
+
+li>a {
+	text-decoration:none;
+	color:#000000;
+}
+
+li>a:hover {
+	color:#FFFFFF;
+}
+
+p {
+	margin-left:15px;
+}
