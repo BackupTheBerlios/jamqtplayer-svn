@@ -16,9 +16,12 @@
 #define QalfAUDIOFILE_H
 
 #include <QString>
+#include <QObject>
 
-class QalfAudioFile
+class QalfAudioFile : public QObject
 {
+	Q_OBJECT
+
 	public:
 		QalfAudioFile();
 		QalfAudioFile(QString & path);
