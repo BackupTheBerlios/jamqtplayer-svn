@@ -18,6 +18,8 @@
 #include <QMainWindow>
 #include <QDirModel>
 #include <QListView>
+#include <QTableView>
+#include "qalfplaylistmodel.h"
 
 class QalfMainWindow : public QMainWindow
 {
@@ -26,6 +28,7 @@ class QalfMainWindow : public QMainWindow
 	public:
 		QalfMainWindow();
 		void setFileModel(QDirModel *) ;
+		void setPlaylistModel(QalfPlaylistModel *);
 
 	protected:
 
@@ -33,6 +36,7 @@ class QalfMainWindow : public QMainWindow
 	
 	private:
 		QListView *fileList;
+		QTableView * playlistView ;
 };
 
 #endif // QalfMAINWINDOW_H

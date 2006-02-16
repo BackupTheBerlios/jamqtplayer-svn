@@ -22,8 +22,16 @@ int main(int argc, char *argv[])
 	QalfMainWindow mainWin;
 
 	// initialization of file browser
-	QDirModel *fileModel = new QDirModel;
-	mainWin.setFileModel(fileModel);
+// 	QDirModel *fileModel = new QDirModel;
+// 	mainWin.setFileModel(fileModel);
+	QalfPlaylistModel *playlistModel = new QalfPlaylistModel();
+	QalfAudioFile * song1 = new QalfAudioFile() ;
+	song1->setTitle(QString("Martine")) ;
+	QalfAudioFile * song2 = new QalfAudioFile() ;
+	song2->setTitle(QString("Leve toi et marche")) ;
+	playlistModel->appendSong(song1);
+	playlistModel->appendSong(song2);
+	mainWin.setPlaylistModel(playlistModel);
 	mainWin.show();
 	return app.exec();
 }
